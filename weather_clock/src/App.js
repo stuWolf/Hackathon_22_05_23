@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import React from "react"
 import moment from 'moment-timezone';
-import Clock from "./Clock";
+// import Clock from "./Clock";
 import SquareClock from "./square_clock";
 
 
@@ -9,10 +9,12 @@ import SquareClock from "./square_clock";
 
 function App() {
   const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
   const [timezone, setTimezone] = useState(null);
-  const [errorMessage, setErrorMessage] = useState('');
+  // const [errorMessage, setErrorMessage] = useState('');
+  const [ setErrorMessage] = useState('');
   const [date, setDate] = useState(new Date());
-  let latitudeDisplay = 0;
+  let latitudeDisplay, longitudeDisplay = 0;
 
   useEffect(() => {
     console.log("Constructor Runs first");
@@ -31,6 +33,7 @@ function App() {
     window.navigator.geolocation.getCurrentPosition(
       (position) => {
         setLatitude(position.coords.latitude);
+        setLongitude(position.coords.longitude);
         // Retrieve the timezone using Moment.js
         const tz = moment.tz.guess();
         setTimezone(tz);
@@ -52,7 +55,7 @@ function App() {
       console.log("5. component WILL UNMOUNT runs towards end of component lifecycle");
       clearInterval(timerId);
     };
-  }, [timezone]);
+  }, [timezone, setErrorMessage]);
 
   useEffect(() => {
     // console.log("4. component did UPDATE runs after SUBSEQUENT renders, not first render");
@@ -68,43 +71,53 @@ function App() {
     };
   }, [date]);
 
-  function isItWarm() {
-    const month = new Date().getMonth();
+  // function isItWarm() {
+  //   const month = new Date().getMonth();
 
-    if (
-      ((month > 4 && month <= 9) || latitude > 0) ||
-      ((month <= 4 && month > 9) || latitude < 0) ||
-      latitude === 0
-    ) {
-      return true;
-    }
+  //   if (
+  //     ((month > 4 && month <= 9) || latitude > 0) ||
+  //     ((month <= 4 && month > 9) || latitude < 0) ||
+  //     latitude === 0
+  //   ) {
+  //     return true;
+  //   }
 
-    return false;
-  }
+  //   return false;
+  // }
 
-  function getClockIcon() {
+  // function getClockIcon() {
     
-    if (isItWarm()) {
-        // console.log('summer 1');
-      return "Summer";
-    }
+  //   if (isItWarm()) {
+  //       // console.log('summer 1');
+  //     return "Summer";
+  //   }
 
-    console.log('winter');
-    return "winter";
+  //   console.log('winter');
+  //   return "winter";
 
-  }
-if(latitude === null ){latitudeDisplay = 0}
-else {latitudeDisplay = latitude.toFixed(2)}
+  // }
+if(latitude  === null ){latitudeDisplay =  0}
+else {
+  latitudeDisplay = latitude.toFixed(2);
+ 
+}
+
+if(longitude === null ){longitudeDisplay= 0}
+else {
+  
+  longitudeDisplay = longitude.toFixed(2);
+}
   // latitudeDisplay = latitude.toFixed(2);
 //let icon={latitude ? getClockIcon() : null}
   return (
     <div>
       <h1>Latitude: {latitudeDisplay}</h1>
+      <h1>Longitude: {longitudeDisplay}</h1>
       <h3>Timezone: {timezone}</h3>
-      {errorMessage || (
+      {/* {errorMessage || (
         <Clock date={date} icon={latitude ? getClockIcon() : null} />
         // return a Clock object and pass date and icon
-      )}
+      )} */}
       
       <div> 
 <SquareClock></SquareClock>
