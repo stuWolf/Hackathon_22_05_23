@@ -72,7 +72,7 @@ function App() {
 //let icon={latitude ? getClockIcon() : null}
   return (
     <div>
-      <h1>{latitude}</h1>
+      <h1>Location: {latitude}</h1>
       
       {errorMessage || (
         <Clock date={date} icon={latitude ? getClockIcon() : null} />
