@@ -45,7 +45,7 @@ To Do list:
 2. API fetching based on user input from the search bar - Kriszta
 3. Displaying API data - Kriszta
 4. Clock transform from analog display to digital and add to other data display - Wolf
-5. Styling - James
+5. Styling, CSS, Sass maybe use tailwind- James
 6. Presentation - James
 
 ## Wireframe:
@@ -58,6 +58,5 @@ To Do list:
 
 Still to do: 
 - Integration
-- Styling, CSS, Sass maybe use tailwind
 - figure out GIT colaboration
 - Deployment
