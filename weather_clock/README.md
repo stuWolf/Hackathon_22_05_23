@@ -56,6 +56,10 @@ To Do list:
  
  ## 24/05/ Wednesday
 
+
+
+
+
 Still to do: 
 - Integration
 - figure out GIT colaboration

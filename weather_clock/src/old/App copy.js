@@ -9,19 +9,17 @@ import SquareClockLocal from "./square_clock_local";
 
 
 function App() {
-  const [latitude, setLatitude] = useState(null);
-  const [longitude, setLongitude] = useState(null);
+  // const [latitude, setLatitude] = useState(null);
+  // const [longitude, setLongitude] = useState(null);
   const [timezone, setTimezone] = useState(null);
   // const [errorMessage, setErrorMessage] = useState('');
   const [ setErrorMessage] = useState('');
   const [date, setDate] = useState(new Date());
   let latitudeDisplay, longitudeDisplay = 0;
-  let FixlatitudeDisplay, FixlongitudeDisplay = 0;
-  const Fixlatitude = 51.5; // Example latitude value
-  const Fixlongitude = -0.12775; // Example longitude value
 
-  // local : -38.02, 145.12, London 51.5, -0.127
-// const apiKey = 'My_Key'; // Replace with your actual API key
+  const latitude = -37.7749; // Example latitude value
+const longitude = 149.4194; // Example longitude value
+const apiKey = 'My_Key'; // Replace with your actual API key
 
   useEffect(() => {
     console.log("Constructor Runs first");
@@ -31,21 +29,21 @@ function App() {
       }, 1000);
 
     // Get user's current position
-    window.navigator.geolocation.getCurrentPosition(
-      position => setLatitude(position.coords.latitude),
-      position => setTimezone(position.coords.timezone),
-      error => setErrorMessage(error.message)
-    );
+    // window.navigator.geolocation.getCurrentPosition(
+    //   position => setLatitude(position.coords.latitude),
+    //   position => setTimezone(position.coords.timezone),
+    //   error => setErrorMessage(error.message)
+    // );
 
     window.navigator.geolocation.getCurrentPosition(
       (position) => {
-        setLatitude(position.coords.latitude);
-        setLongitude(position.coords.longitude);
+        // setLatitude(position.coords.latitude);
+        // setLongitude(position.coords.longitude);
         // Retrieve the timezone using Moment.js
         const tz = moment.tz.guess();
         setTimezone(tz);
       },
-      (position) => setLatitude(position.coords.latitude),
+      // (position) => setLatitude(position.coords.latitude),
       (error) => setErrorMessage(error.message)
       
     );
@@ -78,7 +76,31 @@ function App() {
     };
   }, [date]);
 
-  
+  // function isItWarm() {
+  //   const month = new Date().getMonth();
+
+  //   if (
+  //     ((month > 4 && month <= 9) || latitude > 0) ||
+  //     ((month <= 4 && month > 9) || latitude < 0) ||
+  //     latitude === 0
+  //   ) {
+  //     return true;
+  //   }
+
+  //   return false;
+  // }
+
+  // function getClockIcon() {
+    
+  //   if (isItWarm()) {
+  //       // console.log('summer 1');
+  //     return "Summer";
+  //   }
+
+  //   console.log('winter');
+  //   return "winter";
+
+  // }
 if(latitude  === null ){latitudeDisplay =  0}
 else {
   latitudeDisplay = latitude.toFixed(2);
@@ -90,36 +112,26 @@ else {
   
   longitudeDisplay = longitude.toFixed(2);
 }
- 
-if(Fixlatitude  === null ){FixlatitudeDisplay =  0}
-else {
-  FixlatitudeDisplay = Fixlatitude.toFixed(2);
- 
-}
-
-if(Fixlongitude === null ){FixlongitudeDisplay= 0}
-else {
-  
-  FixlongitudeDisplay = Fixlongitude.toFixed(2);
-}
-
+  // latitudeDisplay = latitude.toFixed(2);
+//let icon={latitude ? getClockIcon() : null}
   return (
     <div>
     
       <h3>Timezone: {timezone}</h3>
-      <h3>Local Latitude: {latitudeDisplay}</h3>
-      <h3>Local Longitude: {longitudeDisplay}</h3>
+      {/* {errorMessage || (
+        <Clock date={date} icon={latitude ? getClockIcon() : null} />
+        // return analogue Clock object and pass date and icon
+      )} */}
       
       <div> 
-      
-    <SquareClock></SquareClock>
+<SquareClock></SquareClock>
 
       </div>
       <div> 
-      <h3>Fix Latitude: {FixlatitudeDisplay}</h3>
-      <h3>Fix Longitude: {FixlongitudeDisplay}</h3>
-      {/* <SquareClockLocal latitude={Fixlatitude} longitude={Fixlongitude} apiKey={apiKey} /> */}
-      <SquareClockLocal latitude={Fixlatitude} longitude={Fixlongitude} />
+      <h1>Latitude: {latitudeDisplay}</h1>
+      <h1>Longitude: {longitudeDisplay}</h1>
+      <SquareClockLocal latitude={latitude} longitude={longitude} apiKey={apiKey} />
+
       </div>
     </div>
     
