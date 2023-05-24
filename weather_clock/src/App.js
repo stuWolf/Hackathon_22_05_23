@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 // import React from "react"
 import moment from 'moment-timezone';
 import Clock from "./Clock";
+import SearchBar from './components/searchBar';
 import SquareClock from "./square_clock";
 
 
@@ -99,17 +100,16 @@ else {latitudeDisplay = latitude.toFixed(2)}
 //let icon={latitude ? getClockIcon() : null}
   return (
     <div>
-      <h1>Latitude: {latitudeDisplay}</h1>
-      <h3>Timezone: {timezone}</h3>
-      {errorMessage || (
-        <Clock date={date} icon={latitude ? getClockIcon() : null} />
+      <SearchBar />
+      {
+      //<h1>{latitude}</h1>
+      }
+      {
+      //{errorMessage || (
+      //  <Clock date={date} icon={latitude ? getClockIcon() : null} />
         // return a Clock object and pass date and icon
-      )}
-      
-      <div> 
-<SquareClock></SquareClock>
-
-      </div>
+      //)}
+      }
     </div>
     
   );
