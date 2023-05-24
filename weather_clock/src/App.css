@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  
+  box-sizing: border-box;
 }
 
 body {
@@ -19,7 +19,7 @@ img, svg {
   display: block;
 }
 
-.weather-container, .weather-data, .search-bar-container, .weather-icon-temp {
+.weather-container, .weather-data, .main-container, .weather-icon-temp {
   display: flex;
   flex-direction: column;
 }
@@ -34,10 +34,10 @@ img, svg {
   background-image: linear-gradient(to bottom, rgb(255, 255, 250, 0.7), #f1fafa);
   border-radius: 10px;
   box-shadow: 2px 4px 8px #FFFFFF;
-  width: 280px;
+  width: 320px;
   justify-content: center;
   align-items: flex-start;
-  padding: 20px;
+  padding: 8px 20px;
 }
 
 .weather-data > p, h1, h3 {
@@ -45,9 +45,14 @@ img, svg {
   opacity: 0.8;
 }
 
+.temp-display {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
 
-
-.search-bar-container {
+.main-container {
   margin: 60px auto;
   width: min(65ch, 100% - 4rem);
   justify-content: center;
@@ -64,8 +69,12 @@ img, svg {
   border-radius: 20px;
   padding: 5px;
   border: white;
-  height: 35px;
+  height: 40px;
   width: 180px;
+}
+
+.input-wrapper > input:focus {
+  outline: none;
 }
 
 .input-wrapper > button {
@@ -80,4 +89,53 @@ img, svg {
 
 input:placeholder-shown {
   font-style: italic;
+}
+
+@media (min-width: 800px) {
+  .weather-data {
+    background-image: linear-gradient(to bottom, rgb(255, 255, 250, 0.7), #f1fafa);
+    justify-content: center;
+    align-items: flex-start;
+    padding: 8px 60px;
+    width: 480px;
+    height: 220px;
+    box-shadow: 2px 4px 8px #FFFFFF;
+    position: relative;
+  }
+
+  .weather-data h1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    right: 0;
+    padding: 60px;
+    
+  }
+  .weather-container {
+    border-radius: 10px;
+    justify-content: space-between;
+    padding: 15px 60px;
+  }
+
+  #weather-icon {
+    margin-top: 20px;
+  }
+
+  .input-wrapper > input {
+    padding: 8px;
+    width: 380px;
+  }
+}
+
+
+@media (min-width: 1080px) {
+  .weather-data {
+    width: 900px;
+    
+  }
+  .input-wrapper > input {
+    padding: 8px;
+    width: 380px;
+  }
 }
