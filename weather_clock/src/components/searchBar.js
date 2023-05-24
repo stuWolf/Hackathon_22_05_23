@@ -3,7 +3,7 @@ import { fetchDefaultWeatherData } from "../utils/weatherDataFetch";
 import '../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
-
+import ApiClock from "./apiClock";
 
 export default function SearchBar() {
   const [cityName, setCityName] = useState("");
@@ -25,7 +25,7 @@ export default function SearchBar() {
     setError(null);
     const fetchedWeatherData = await fetchDefaultWeatherData(cityName, setError);
     setWeatherData(fetchedWeatherData);
-    setCityName("")
+    //setCityName("")
   };
 
   const iconFetcher = () => {
@@ -38,16 +38,17 @@ export default function SearchBar() {
     <div className="main-container">
       <div >
       {error ? (
-        <p>{error}</p>
+        <p className="error-message">{error}</p>
       ) : (
         weatherData && weatherData.weather && (
           <div className="weather-container">
+
             <div className="weather-data">
               <h3><FontAwesomeIcon icon={faLocationDot} /> {weatherData.name}</h3>
-              <h1>11:43pm</h1> 
-              {/* Wolf based on the wireframe clock component should come here. */}
+              <h1><ApiClock city={cityName}/> </h1>
               <p><em>{weatherData.weather[0].description}.</em></p>
             </div>
+
             <div className="weather-icon-temp">
               <img id="weather-icon" src={iconFetcher()} alt="Weather icon" />
                 <div className="temp-display">
@@ -59,6 +60,7 @@ export default function SearchBar() {
                 </p>
                 </div>
             </div>
+            
           </div>
         )
       )}

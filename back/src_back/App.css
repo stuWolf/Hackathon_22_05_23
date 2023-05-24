@@ -39,11 +39,9 @@ img, svg {
 .weather-icon-temp {
   justify-content: center;
   font-weight: bold;
-  font-weight: bold;
   align-items: center;
   margin: 60px 0;
   animation: fadeIn .6s;
-  color: #f1fafa;
   color: #f1fafa;
 }
 
