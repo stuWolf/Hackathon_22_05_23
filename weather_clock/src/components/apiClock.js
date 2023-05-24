@@ -32,7 +32,7 @@ console.log(city)
       }
       
     }; // end effect
-    console.log('end effect')
+    // console.log('end effect')
     
 
     console.log('localTime:  '+ localTime); // goes every time when any key pressed
