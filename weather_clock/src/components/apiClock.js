@@ -6,7 +6,7 @@ import '../App.css'
 
 const ApiClock = ({ city }) => {
 
-  const [localTime, setLocalTime] = useState(null);
+const [localTime, setLocalTime] = useState(null);
 console.log(city)
 
   useEffect(() => {
