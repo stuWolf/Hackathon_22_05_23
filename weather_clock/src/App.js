@@ -74,12 +74,15 @@ function App() {
   return (
     <div>
       <SearchBar />
-      <h1>{latitude}</h1>
-      
-      {errorMessage || (
-        <Clock date={date} icon={latitude ? getClockIcon() : null} />
+      {
+      //<h1>{latitude}</h1>
+      }
+      {
+      //{errorMessage || (
+      //  <Clock date={date} icon={latitude ? getClockIcon() : null} />
         // return a Clock object and pass date and icon
-      )}
+      //)}
+      }
     </div>
   );
 }
