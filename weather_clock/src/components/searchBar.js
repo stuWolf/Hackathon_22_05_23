@@ -48,7 +48,6 @@ export default function SearchBar() {
               <h3><FontAwesomeIcon icon={faLocationDot} /> {weatherData.name} </h3> 
               <h1>11:43pm</h1> 
               {/* Wolf based on the wireframe clock component should come here. */}
-              ________________________
               <p><em>{weatherData.weather[0].description}.</em></p>
             </div>
             <div className="weather-icon-temp">

@@ -14,15 +14,11 @@ body {
  
 }
 
-
 img, svg {
   max-width: 100%;
   display: block;
 }
 
-@keyframes mobileView {
-
-}
 .weather-container, .weather-data, .main-container, .weather-icon-temp {
   display: flex;
   flex-direction: column;
@@ -32,6 +28,7 @@ img, svg {
   justify-content: center;
   align-items: center;
   margin: 60px 0;
+  animation: fadeIn .6s;
 }
 
 .weather-data {
@@ -42,12 +39,14 @@ img, svg {
   justify-content: center;
   align-items: flex-start;
   padding: 8px 20px;
+  animation: fadeIn .6s;
 }
 
 .weather-data > p, h1, h3 {
   padding: 5px 10px;
   opacity: 0.7;
   letter-spacing: .125em;
+  animation: fadeIn 0.6s;
 }
 
 .temp-display > p {
@@ -66,10 +65,11 @@ img, svg {
   width: min(65ch, 100% - 4rem);
   justify-content: center;
   align-items: center;
+  animation: fadeIn .6s;
 }
 
 .input-wrapper {
-  transform: translateY(-40px);
+  transform: translateY(-20px);
   border: 2px solid floralwhite;
   background: white;
   border-radius: 20px;
@@ -176,6 +176,10 @@ input:placeholder-shown {
   .weather-data h1 {
     font-size: 3em;
   }
+}
 
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
