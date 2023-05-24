@@ -26,7 +26,7 @@ export default function SearchBar() {
     setError(null);
     const fetchedWeatherData = await fetchDefaultWeatherData(cityName, setError);
     setWeatherData(fetchedWeatherData);
-    setCityName('')
+    setCityName("")
   };
 
   const iconFetcher = () => {
@@ -44,8 +44,7 @@ export default function SearchBar() {
         weatherData && weatherData.weather && (
           <div className="weather-container">
             <div className="weather-data">
-              
-              <h3><FontAwesomeIcon icon={faLocationDot} /> {weatherData.name} </h3> 
+              <h3><FontAwesomeIcon icon={faLocationDot} /> {weatherData.name}</h3>
               <h1>11:43pm</h1> 
               {/* Wolf based on the wireframe clock component should come here. */}
               <p><em>{weatherData.weather[0].description}.</em></p>
