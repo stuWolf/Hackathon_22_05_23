@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import React from "react"
 import Clock from "./Clock";
+import SearchBar from './components/searchBar';
 
 
 
@@ -72,6 +73,7 @@ function App() {
 //let icon={latitude ? getClockIcon() : null}
   return (
     <div>
+      <SearchBar />
       <h1>{latitude}</h1>
       
       {errorMessage || (
