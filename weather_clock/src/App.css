@@ -87,6 +87,7 @@ img, svg {
   border: 2px solid floralwhite;
   background: white;
   border-radius: 20px;
+  position: relative;
 }
 
 .input-wrapper > input {
