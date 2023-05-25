@@ -97,6 +97,9 @@ img, svg {
   background-color: white;
 }
 
+.error-message {
+  transform: translateY(100px)
+}
 
 
 input:placeholder-shown {
