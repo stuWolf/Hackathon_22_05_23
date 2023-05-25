@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import { fetchDefaultWeatherData } from "../utils/weatherDataFetch";
+import './searchBar.css'
+import '../App.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+
 
 export default function SearchBar() {
   const [cityName, setCityName] = useState("");
@@ -21,6 +26,7 @@ export default function SearchBar() {
     setError(null);
     const fetchedWeatherData = await fetchDefaultWeatherData(cityName, setError);
     setWeatherData(fetchedWeatherData);
+    setCityName("")
   };
 
   const iconFetcher = () => {
@@ -30,36 +36,45 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="search-bar-container">
+    <div className="main-container">
       <div >
       {error ? (
         <p>{error}</p>
       ) : (
         weatherData && weatherData.weather && (
-          <>
-            <p>{weatherData.name}</p>
-            {/* Wolf based on the wireframe clock component should come here. */}
-            <p> {weatherData.weather[0].description} </p>
-            <img id="weather-icon" src={iconFetcher()} alt="Weather icon" />
-            <p>
-              {Math.floor(weatherData.main.temp_max)}/
-              {Math.floor(weatherData.main.temp_min)} C{" "}
-            </p>
-            
-          </>
+          <div className="weather-container">
+            <div className="weather-data">
+              <h3><FontAwesomeIcon icon={faLocationDot} /> {weatherData.name}</h3>
+              <h1>11:43pm</h1> 
+              {/* Wolf based on the wireframe clock component should come here. */}
+              <p><em>{weatherData.weather[0].description}.</em></p>
+            </div>
+            <div className="weather-icon-temp">
+              <img id="weather-icon" src={iconFetcher()} alt="Weather icon" />
+                <div className="temp-display">
+                <p><em>High: {""}
+                  {Math.floor(weatherData.main.temp_max)}°C </em>
+                </p>
+                <p><em>Low: {""}
+                  {Math.floor(weatherData.main.temp_min)}°C</em>
+                </p>
+                </div>
+            </div>
+          </div>
         )
       )}
       </div>
 
       <form onSubmit={handleSubmit}>
         <div className="input-wrapper">
+        <button type="submit" class="btn"><i class="fas fa-search"></i></button>
           <input
             type="text"
             placeholder="Search location..."
             onChange={handleChange}
             value={cityName}
           />
-          <button type="submit">Go</button>
+          
         </div>
       </form>
     </div>
