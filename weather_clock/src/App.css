@@ -10,7 +10,7 @@ body {
   line-height: 1.5;
   height: 100vh;
   overflow: hidden;
-  background-image: linear-gradient(to bottom, #c8edf0, #FFFAF0);
+  background-image: linear-gradient(to bottom, #c8edf0, #000000);
  
 }
 
@@ -26,9 +26,11 @@ img, svg {
 
 .weather-icon-temp {
   justify-content: center;
+  font-weight: bold;
   align-items: center;
   margin: 60px 0;
   animation: fadeIn .6s;
+  color: #f1fafa;
 }
 
 .weather-data {
