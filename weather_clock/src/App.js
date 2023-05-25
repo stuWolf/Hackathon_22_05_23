@@ -19,7 +19,7 @@ function App() {
     <div>
       <SearchBar />
       {
-      <SquareClock></SquareClock>
+      <SquareClock />
       }
       <h3> Current time in {city}</h3>
       {

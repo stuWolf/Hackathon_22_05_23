@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { fetchDefaultWeatherData } from "../utils/weatherDataFetch";
-import './searchBar.css'
 import '../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
