@@ -10,7 +10,7 @@ try {
       throw new Error("Type the name of a location and hit enter to search.");
     }
     if (!response.ok) {
-      throw new Error(`Huh? ${cityName} doesn't exist.`);
+      throw new Error(`Hmm? It looks like ${cityName} doesn't exist.`);
     }
     const data = await response.json();
     console.log(data);

@@ -42,12 +42,13 @@ export default function SearchBar() {
       ) : (
         weatherData && weatherData.weather && (
           <div className="weather-container">
+
             <div className="weather-data">
               <h3><FontAwesomeIcon icon={faLocationDot} /> {weatherData.name}</h3>
               <h1><ApiClock city={cityName}/> </h1>
-              {/* Wolf based on the wireframe clock component should come here. */}
               <p><em>{weatherData.weather[0].description}.</em></p>
             </div>
+
             <div className="weather-icon-temp">
               <img id="weather-icon" src={iconFetcher()} alt="Weather icon" />
                 <div className="temp-display">
@@ -59,6 +60,7 @@ export default function SearchBar() {
                 </p>
                 </div>
             </div>
+            
           </div>
         )
       )}
