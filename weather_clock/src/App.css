@@ -1,5 +1,6 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@100;400&family=Inter:wght@400;600;700&family=Roboto:wght@400;700&family=Work+Sans:ital,wght@0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@100;400&family=Inter:wght@400;600;700&family=Roboto:wght@400;700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,800;1,400;1,800&display=swap');
+;
+;
 
   @keyframes fadeIn {
     0% {opacity: 0;}
@@ -62,10 +63,17 @@ img, svg {
   opacity: 0.7;
   letter-spacing: .125em;
   animation: fadeIn 0.6s;
+  font-weight: 500;
+}
+
+.weather-data > h1 {
+  font-size: 2.5em;
+  font-weight: 500;
 }
 
 .temp-display > p {
   letter-spacing: .125em;
+  font-weight: 300;
 }
 
 .temp-display {
@@ -85,10 +93,12 @@ img, svg {
 
 .input-wrapper {
   transform: translateY(-40px);
-  border: 2px solid floralwhite;
   background: white;
   border-radius: 20px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .input-wrapper > input {
@@ -104,11 +114,15 @@ img, svg {
 }
 
 .input-wrapper > button {
-  height: 30px;
-  padding: 15px;
+  height: auto;
+  padding: 5px;
   border-radius: 15px;
-  border: white;
+  margin: 0px 5px;
   background-color: white;
+}
+
+.input-wrapper > .user-input {
+  font-weight: light;
 }
 
 .error-message {
@@ -126,11 +140,12 @@ input:placeholder-shown {
 @media (min-width: 600px) {
   .weather-data {
     background-image: linear-gradient(to bottom, rgb(255, 255, 250, 0.7), #f1fafa);
+    margin-top: 10px;
     justify-content: center;
     align-items: flex-start;
     padding: 8px 60px;
     width: 480px;
-    height: 220px;
+    height: 160px;
     box-shadow: 2px 4px 8px #FFFFFF;
     position: relative;
   }
@@ -150,7 +165,7 @@ input:placeholder-shown {
   }
 
   .weather-data h1 {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   .weather-data h3 {
@@ -161,15 +176,17 @@ input:placeholder-shown {
     font-size: 1.125em;
   }
 
-  .weather-container {
+  /*.weather-container {
     border-radius: 10px;
     justify-content: space-between;
-    padding: 15px 60px;
-  }
+    padding: 15px 30px;
+    border: 2px solid green;
+  }*/
 
   #weather-icon {
-    margin-top: 20px;
+    margin-top: 10px;
   }
+
 
   .input-wrapper > input {
     padding: 8px;
@@ -185,7 +202,7 @@ input:placeholder-shown {
     font-size: 2em;
   }
   .weather-data h1 {
-    font-size: 2em;
+    font-size: 2.5em;
   }
 
   #weather-icon {

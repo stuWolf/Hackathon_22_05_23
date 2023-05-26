@@ -70,10 +70,12 @@ export default function SearchBar() {
         <div className="input-wrapper">
         <button type="submit" class="btn"><i class="fas fa-search"></i></button>
           <input
+            className="user-input"
             type="text"
             placeholder="Search location..."
-            onChange={handleChange}
             value={cityName}
+            onChange={handleChange}
+            
           />
           
         </div>
