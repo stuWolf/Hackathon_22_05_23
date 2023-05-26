@@ -7,14 +7,14 @@ import '../App.css'
 const ApiClock = ({ city }) => {
 
 const [localTime, setLocalTime] = useState(null);
-console.log(city)
+// console.log(city)
 
   useEffect(() => {
     const getLocationTime = async () => {
       try {
 
         const timeResponse = await fetch(`https://timezone.abstractapi.com/v1/current_time/?api_key=e71bc4abca5d4a07a4e3513f87e8759f&location=${city}`);
-          console.log(timeResponse)
+          console.log('timeResponse' + timeResponse)
         if (timeResponse.status !== 429) {
         //   setLocalTime(null)
         // } else {
@@ -31,19 +31,19 @@ console.log(city)
         setLocalTime(null);
       }
       
-    }; // end effect
-    // console.log('end effect')
+    }; // end getLocationTime
+    
     
 
-    console.log('localTime:  '+ localTime); // goes every time when any key pressed
+    // console.log('localTime:  '+ localTime); // goes every time when any key pressed
 
-const handleKeyPress = (event) => { 
+    const handleKeyPress = (event) => { 
      
         if ((event.key === 'Enter')) {
         getLocationTime();
         console.log('enter pressed');  // detects only when function initialised
       }
-    };
+    }; 
 
 // Call the getLocationTime function initially
     if (localTime == null){
@@ -53,17 +53,19 @@ const handleKeyPress = (event) => {
 
     document.addEventListener('keydown', handleKeyPress);
      // Update the local time every minute using setInterval
-     const interval = setInterval(getLocationTime, 60000);
+    // const interval = setInterval(getLocationTime, 6000);
 
 
    
 
     // Clean up the interval when the component is unmounted
     return () => {
-      clearInterval(interval);
+      // clearInterval(interval);
       document.removeEventListener('keydown', handleKeyPress);
     };
-  }, [city, localTime]);
+
+    // console.log('end effect')
+  }, [city, localTime]); // end efect
 
   const formatTime = (value) => {
     return value < 10 ? `0${value}` : value;
