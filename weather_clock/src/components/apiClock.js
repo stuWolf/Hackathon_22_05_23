@@ -13,7 +13,7 @@ const [localTime, setLocalTime] = useState(null);
     const getLocationTime = async () => {
       try {
 
-        const timeResponse = await fetch(`https://timezone.abstractapi.com/v1/current_time/?api_key=e71bc4abca5d4a07a4e3513f87e8759f&location=${city}`);
+        const timeResponse = await fetch(`https://timezone.abstractapi.com/v1/current_time/?api_key=149318ec39024b14ac6e19ff851c1797&location=${city}`);
           console.log('timeResponse' + timeResponse)
         if (timeResponse.status !== 429) {
         //   setLocalTime(null)

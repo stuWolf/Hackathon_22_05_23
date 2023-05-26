@@ -9,7 +9,7 @@ export default function SearchBar() {
   const [cityName, setCityName] = useState("");
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
-  const [ampm, setAmpm] = useState("AM")
+  // const [ampm, setAmpm] = useState("AM")
   const [showInstructions, setShowInstructions] = useState(true)
 
   /* Wolf you can access the city's longitude and latitude data using 
@@ -22,7 +22,7 @@ export default function SearchBar() {
   };
   
   const handleAmpmChange = (newAmpm) => {
-    setAmpm(newAmpm)
+    // setAmpm(newAmpm)
 
     setTimeout(() => {
     document.documentElement.style.setProperty(
