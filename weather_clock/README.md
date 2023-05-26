@@ -17,7 +17,7 @@ Create a  Clock and Weather app. Nothing super new, but I just want to go throug
  Create Build and first Deploy
 
  ## Repo: https://github.com/stuWolf/Hackathon_22_05_23
-
+ ## Deployment: https://gpweatherclock.netlify.app/
  ## Journal:
 22/05/23 Monday
 Kickoff meeting, get to know
@@ -68,3 +68,4 @@ To Do list:
 ## 26/05/ Friday
 - Deployment
 - Presentation
+
