@@ -112,7 +112,6 @@ export default function SearchBar() {
             placeholder="Search location..."
             value={cityName}
             onChange={handleChange}
-            
           />
           
         </div>
