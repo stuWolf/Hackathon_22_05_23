@@ -8,14 +8,21 @@ const ApiClock = ({ city, onAmpmChange }) => {
 
 const [localTime, setLocalTime] = useState(null);
 // console.log(city)
+const key = process.env.REACT_APP_API_KEY;
+
+// console.log(process.env.REACT_APP_API_KEY)
 
   useEffect(() => {
     const getLocationTime = async () => {
       try {
-
-        const timeResponse = await fetch(`https://timezone.abstractapi.com/v1/current_time/?api_key=149318ec39024b14ac6e19ff851c1797&location=${city}`);
+        // console.log(process.env.REACT_APP_API_KEY)
+// console.log('key = ' + key)
+// const key = '149318ec39024b14ac6e19ff851c1797';
+        const timeResponse = await fetch(`https://timezone.abstractapi.com/v1/current_time/?api_key=${key}&location=${city}`);
           console.log('timeResponse' + timeResponse)
-        if (timeResponse.status !== 429) {
+          console.log('timeResponseStat' + timeResponse.status)
+        // if (timeResponse.status !== 429) {
+          if (timeResponse.status === 200) {
         //   setLocalTime(null)
         // } else {
 
@@ -64,7 +71,7 @@ const [localTime, setLocalTime] = useState(null);
       document.removeEventListener('keydown', handleKeyPress);
     };
 
-  }, [city, localTime, onAmpmChange]);
+  }, [city, localTime, onAmpmChange, key]);
 
   const formatTime = (value) => {
     return value < 10 ? `0${value}` : value;
