@@ -25,8 +25,8 @@ Responsive design.
 ## [Deployment](https://gpweatherclock.netlify.app/)
 
 ## Wireframe:
-![Potential Wireframes](./src/images/Screenshot_potential_wireframe.png)
-![Wireframe](./src/images/Screenshot_wireframe.jpg)
+![Potential Wireframes](./weather_clock/src/images/Screenshot_potential_wireframe.png)
+![Wireframe](.weather_clock/src/images/Screenshot_wireframe.jpg)
 
 Throughout the build of this project our group communicated through discord text and call, and had daily standup meetings to discuss features and progress. 
 
