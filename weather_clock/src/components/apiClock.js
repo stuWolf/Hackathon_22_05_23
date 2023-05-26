@@ -17,7 +17,7 @@ const key = process.env.REACT_APP_API_KEY;
       try {
         // console.log(process.env.REACT_APP_API_KEY)
 // console.log('key = ' + key)
-// const key = '149318ec39024b14ac6e19ff851c1797';
+
         const timeResponse = await fetch(`https://timezone.abstractapi.com/v1/current_time/?api_key=${key}&location=${city}`);
           console.log('timeResponse' + timeResponse)
           console.log('timeResponseStat' + timeResponse.status)
