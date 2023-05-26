@@ -1,6 +1,9 @@
 # Hackathon_22_05_23
 ## Purpose, Goals:   
 
+
+## [See the live deployed version here](https://gpweatherclock.netlify.app/)
+
 Clock and Weather application. 
 
 Has been made with the intention of becoming more familiar with:
@@ -22,12 +25,9 @@ Displays timezone of location captured by input.
 Different backgrounds and weather icons dependent upon the time and weather values.
 Responsive design.
 
-## [Deployment](https://gpweatherclock.netlify.app/)
-
 ## Wireframe:
 ![Potential Wireframes](./weather_clock/src/images/Screenshot_potential_wireframe.png)
 ![Wireframe](./weather_clock/src/images/Screenshot_wireframe.jpg)
 
 Throughout the build of this project our group communicated through discord text and call, and had daily standup meetings to discuss features and progress. 
-
 
