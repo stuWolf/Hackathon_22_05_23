@@ -1,3 +1,4 @@
+
   @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@100;400&family=Inter:wght@400;600;700&family=Roboto:wght@400;700&family=Work+Sans:ital,wght@0,600;1,400&display=swap');
 
   @keyframes fadeIn {
@@ -39,11 +40,9 @@ img, svg {
 .weather-icon-temp {
   justify-content: center;
   font-weight: bold;
-  font-weight: bold;
   align-items: center;
   margin: 60px 0;
   animation: fadeIn .6s;
-  color: #f1fafa;
   color: #f1fafa;
 }
 
@@ -89,6 +88,7 @@ img, svg {
   border: 2px solid floralwhite;
   background: white;
   border-radius: 20px;
+  position: relative;
 }
 
 .input-wrapper > input {
