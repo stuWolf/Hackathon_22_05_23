@@ -1,3 +1,4 @@
+# Hackathon_22_05_23
 ## Purpose, Goals:   
 Create a  Clock and Weather app. Nothing super new, but I just want to go through all process steps:
  - development
@@ -52,11 +53,18 @@ To Do list:
 
 ![Wireframe: ](./pictures/Screenshot_wireframe.jpg)
 
- 
+ - implement search bar
  
  ## 24/05/ Wednesday
 
-Still to do: 
+- Implement API based weather and Clock
+
+
+
+## 25/05/ Thursday
 - Integration
 - figure out GIT colaboration
+
+## 26/05/ Friday
 - Deployment
+- Presentation
