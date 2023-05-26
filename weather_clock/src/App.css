@@ -2,11 +2,15 @@
 ;
 ;
 
-  @keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-  }
-  
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 0.8;}
+}
+
+@keyframes bg-animation {
+  0% {background-position: right}
+  100% {background-position: left}
+}
 
 * {
   margin: 0;
@@ -18,19 +22,48 @@ html {
   height: 100%;
 }
 
+
 body {
   font-family: 'Work Sans', 'Inter', system-ui;
   font-size: 1.125rem;
   line-height: 1.5;
   height: 100%;
   overflow: hidden;
-  background-image: linear-gradient(to bottom, #c8edf0, #2c3a3b);
-  background-repeat: no-repeat;
+  position: relative;
+  /*background-image: linear-gradient(to bottom, #c8edf0, #2c3a3b);*/
+  background-color: #c8edf0;
+  background-image: var(--background-gradient);
+  background-repeat: no-repeat; 
+  transition: background-image 1s;
+  transition: background-color 1s;
+  background-size: 800%;
+  /*background-position: bottom;*/
+  animation: bg-animation 6s infinite alternate;
 }
+
 
 img, svg {
   max-width: 100%;
   display: block;
+}
+
+.instructions {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.instructions > h3 {
+  opacity: 0;
+  animation: fadeIn 1.5s 1s forwards;
+}
+
+.instructions > p {
+  opacity: 0;
+  animation: fadeIn 1.5s 2s forwards;
 }
 
 .weather-container, .weather-data, .main-container, .weather-icon-temp {
@@ -44,7 +77,10 @@ img, svg {
   align-items: center;
   margin: 60px 0;
   animation: fadeIn .6s;
-  color: #f1fafa;
+  /*color: #f1fafa;*/
+  color: var(--text-color);
+  text-shadow: var(--text-shadow);
+  transition: color 1s ease;
 }
 
 .weather-data {
@@ -99,13 +135,15 @@ img, svg {
   display: flex;
   justify-content: center;
   align-content: center;
+  opacity: 0;
+  animation: fadeIn 1s 3s forwards;
 }
 
 .input-wrapper > input {
   border-radius: 20px;
   padding: 5px;
   border: white;
-  height: 40px;
+  height: 42px;
   width: 200px;
 }
 
@@ -124,6 +162,8 @@ img, svg {
 .input-wrapper > .user-input {
   font-weight: light;
 }
+
+
 
 .error-message {
   transform: translateY(140px);

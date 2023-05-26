@@ -4,7 +4,7 @@ import '../App.css'
 
 
 
-const ApiClock = ({ city }) => {
+const ApiClock = ({ city, onAmpmChange }) => {
 
 const [localTime, setLocalTime] = useState(null);
 console.log(city)
@@ -63,7 +63,7 @@ const handleKeyPress = (event) => {
       clearInterval(interval);
       document.removeEventListener('keydown', handleKeyPress);
     };
-  }, [city, localTime]);
+  }, [city, localTime, onAmpmChange]);
 
   const formatTime = (value) => {
     return value < 10 ? `0${value}` : value;
@@ -75,12 +75,13 @@ const handleKeyPress = (event) => {
       const minutes = formatTime(localTime.getMinutes());
     //  const seconds = formatTime(localTime.getSeconds());
       const ampm = localTime.getHours() >= 12 ? "PM" : "AM";
-
+      onAmpmChange(ampm)
       return `${hours}:${minutes} ${ampm}`;
       //return `${hours}:${minutes}:${seconds} ${ampm}`;
     } 
     return " ";
   };
+  
 
   return (
     <div className="square-clock">
