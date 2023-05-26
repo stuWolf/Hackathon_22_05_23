@@ -1,72 +1,33 @@
 # Hackathon_22_05_23
 ## Purpose, Goals:   
-Create a  Clock and Weather app. Nothing super new, but I just want to go through all process steps:
- - development
- - deployment, Git Colaboration
- - presentation                                     
+
+
+## [See the live deployed version here](https://gpweatherclock.netlify.app/)
+
+Clock and Weather application. 
+
+Has been made with the intention of becoming more familiar with:
+- Git Collaboration
+- Collaborative development
+- Deployment
+- Build presentation
+
+API's used:
+
+Time: https://www.abstractapi.com/
+Weather: https://openweathermap.org/
  
- 
- 
- 
- This example is drawn from  in T3/WK6 class /state model. It is a bit old, so we converted  it to functional elements,  more modern react. We still need to decdide on an API to fetch the weather information.
- 
- ## Todo: 
- 
- Integrate Weather function.
- Fix season dependant Display
- Create Build and first Deploy
+## Features: 
 
- ## Repo: https://github.com/stuWolf/Hackathon_22_05_23
- ## Deployment: https://gpweatherclock.netlify.app/
-
-
- ## Journal:
-22/05/23 Monday
-Kickoff meeting, get to know
- 
- 23/05/ Tuesday
-2 meetings, decided on A wireframe layout
-
-Features:
-Must have: 
-- Digital clock local time H:Min:Sec:AM/PM
-- Display location
-- Weather description
-- Weather Symbol and temperature
-- Search bar for location
-
-Nice to have:
-3 day weather forecast
-Display day
-Display time at selected location( would require world clock API, currently we use Date. of system time)
-
-
-
-To Do list: 
-
-1. Search bar - James
-2. API fetching based on user input from the search bar - Kriszta
-3. Displaying API data - Kriszta
-4. Clock transform from analog display to digital and add to other data display - Wolf
-5. Styling, CSS, Sass maybe use tailwind- James
-6. Presentation - James
+Search bar to capture user input.
+Displays weather information of location captured by input.
+Displays timezone of location captured by input.
+Different backgrounds and weather icons dependent upon the time and weather values.
+Responsive design.
 
 ## Wireframe:
+![Potential Wireframes](./weather_clock/src/images/Screenshot_potential_wireframe.png)
+![Wireframe](./weather_clock/src/images/Screenshot_wireframe.jpg)
 
-![Wireframe: ](./pictures/Screenshot_wireframe.jpg)
+Throughout the build of this project our group communicated through discord text and call, and had daily standup meetings to discuss features and progress. 
 
- - implement search bar
- 
- ## 24/05/ Wednesday
-
-- Implement API based weather and Clock
-
-
-
-## 25/05/ Thursday
-- Integration
-- figure out GIT colaboration
-
-## 26/05/ Friday
-- Deployment
-- Presentation
