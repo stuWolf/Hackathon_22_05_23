@@ -33,5 +33,6 @@ API's used:
 
 * (And Desktop wireframe 1)
 
+## Task management 
 Throughout the build of this project our group communicated through discord text and call, and had daily standup meetings to discuss features and progress. 
 
