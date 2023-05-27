@@ -14,16 +14,16 @@ Has been made with the intention of becoming more familiar with:
 
 API's used:
 
-Time: https://www.abstractapi.com/
-Weather: https://openweathermap.org/
+- Time: https://www.abstractapi.com/
+- Weather: https://openweathermap.org/
  
 ## Features: 
 
-Search bar to capture user input.
-Displays weather information of location captured by input.
-Displays timezone of location captured by input.
-Different backgrounds and weather icons dependent upon the time and weather values.
-Responsive design.
+- Search bar to capture user input. (MVP) (J)
+- Displays weather information of location captured by input. (MVP) (K)
+- Displays time of location captured by input. (MVP) (W)
+- Different backgrounds and weather icons dependent upon values (n2h) (J)
+- Responsive design. (MVP) (J)
 
 ## Wireframe:
 ![Potential Wireframes](./weather_clock/src/images/Screenshot_potential_wireframe.png)
