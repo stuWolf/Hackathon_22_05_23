@@ -136,7 +136,34 @@ img, svg {
   align-content: center;
   opacity: 0;
   animation: fadeIn 1s 3s forwards;
+  /* new */
+  bottom: 10vh; /* Adjust this value as needed */
+  left: 50%;
+  transform: translateX(-50%);
 }
+
+
+/* Rest of your CSS code */ 
+
+/* .input-wrapper {
+  transform: translateY(-40px);
+  background: white;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  opacity: 0;
+  animation: fadeIn 1s 3s forwards;
+  position: fixed;
+   Adjust this value as needed  
+  bottom: 10vh;   
+  left: 50%;
+  transform: translateX(-50%);
+} */
+
+/* Rest of your CSS code*/
+
 
 .input-wrapper > input {
   border-radius: 20px;
@@ -151,7 +178,7 @@ img, svg {
 }
 
 .input-wrapper > button {
-  height: auto;
+  /* height: auto; */
   padding: 5px;
   border-radius: 15px;
   margin: 0px 5px;
@@ -236,6 +263,7 @@ input:placeholder-shown {
 }
 
 @media (min-width: 820px) {
+
   .weather-data {
     width: 720px;
   }
