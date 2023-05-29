@@ -118,12 +118,28 @@ img, svg {
   line-height: 1.5;
 }
 
+/* old */
+/* .main-container {
+  margin: 60px auto;
+  width: min(65ch, 100% - 4rem);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn .6s;
+} */
+
+
+/* new */
+
+
 .main-container {
   margin: 60px auto;
   width: min(65ch, 100% - 4rem);
   justify-content: center;
   align-items: center;
   animation: fadeIn .6s;
+  position: relative;
+  transition: transform 0.3s ease;
+  transform: translateY(calc(var(--is-keyboard-open) * -50%));
 }
 
 .input-wrapper {
@@ -136,10 +152,7 @@ img, svg {
   align-content: center;
   opacity: 0;
   animation: fadeIn 1s 3s forwards;
-  /* new */
-  bottom: 10vh; /* Adjust this value as needed */
-  left: 50%;
-  transform: translateX(-50%);
+  
 }
 
 

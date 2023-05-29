@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { fetchDefaultWeatherData } from "../utils/weatherDataFetch";
 import '../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,10 +11,17 @@ export default function SearchBar() {
   const [error, setError] = useState(null);
   // const [ampm, setAmpm] = useState("AM")
   const [showInstructions, setShowInstructions] = useState(true)
-  const [isKeyboardOpen, setIsKeyboardOpen] = useState(false);
+
   /* Wolf you can access the city's longitude and latitude data using 
   weatherData.coord.lon and weatherData.coord.lat, also time zone
   weatherData.timezone */
+
+
+
+
+
+
+  
 
   const handleChange = (e) => {
     //e.preventDefault()
@@ -45,16 +52,7 @@ export default function SearchBar() {
   }, 10) 
   }
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsKeyboardOpen(window.innerHeight < window.outerHeight);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -73,8 +71,7 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="main-container" style={{ '--is-keyboard-open': isKeyboardOpen ? 1 : 0 }}>
-      
+    <div className="main-container">
       {showInstructions && (
         <div className="instructions">
           <h3>Welcome to GP Weather Clock.</h3>
