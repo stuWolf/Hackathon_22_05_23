@@ -65,6 +65,9 @@ export default function SearchBar() {
     setShowInstructions(false)
     //setCityName("")
   };
+console.log(`is KeyboardOpen = ${isKeyboardOpen}`)
+console.log(`innerHeight = ${window.innerHeight}`)
+console.log(`OuterHeight = ${window.outerHeight}`)
 
   const iconFetcher = () => {
     let iconCode = weatherData.weather[0].icon;
@@ -74,7 +77,7 @@ export default function SearchBar() {
 
   return (
     <div className="main-container" style={{ '--is-keyboard-open': isKeyboardOpen ? 1 : 0 }}>
-      
+       
       {showInstructions && (
         <div className="instructions">
           <h3>Welcome to GP Weather Clock.</h3>
@@ -126,6 +129,7 @@ export default function SearchBar() {
           
         </div>
       </form>
+      
     </div>
   );
 }
