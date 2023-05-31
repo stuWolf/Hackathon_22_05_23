@@ -157,9 +157,9 @@ img, svg {
   justify-content: center;
   align-items: center;
   animation: fadeIn .6s;
-  position: relative;
+  /* position: relative;
   transition: transform 0.3s ease;
-  transform: translateY(calc(var(--is-keyboard-open) * -20%));
+  transform: translateY(calc(var(--is-keyboard-open) * -20%)); */
 } 
 
 
@@ -240,6 +240,13 @@ input:placeholder-shown {
 }
 
 @media (min-width: 600px) {
+
+  .main-container{
+
+    position: relative;
+    transition: transform 0.3s ease;
+    transform: translateY(calc(var(--is-keyboard-open) * -20%));
+  }
   .weather-data {
     background-image: linear-gradient(to bottom, rgb(255, 255, 250, 0.7), #f1fafa);
     margin-top: 10px;
@@ -298,6 +305,13 @@ input:placeholder-shown {
 
 @media (min-width: 820px) {
 
+  .main-container{
+
+    position: relative;
+    transition: transform 0.3s ease;
+    transform: translateY(calc(var(--is-keyboard-open) * -20%));
+  }
+
   .weather-data {
     width: 720px;
   }
@@ -316,6 +330,12 @@ input:placeholder-shown {
 
 
 @media (min-width: 1080px) {
+  .main-container{
+
+    position: relative;
+    transition: transform 0.3s ease;
+    transform: translateY(calc(var(--is-keyboard-open) * -0%));
+  }
   
   .weather-data {
     width: 900px;
