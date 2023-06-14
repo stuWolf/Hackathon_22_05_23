@@ -3,6 +3,17 @@
 
 
 ## [See the live deployed version here](https://gpweatherclock.netlify.app/)
+## [See the presentation outlining the build process](https://youtu.be/rfnwj2FJZQI)
+
+## Desktop:
+
+<img src="https://i.imgur.com/Z9yjTSa.png" alt="Desktop-view-1" width="480" /> <img src="https://i.imgur.com/jTVDu0T.png" alt="Desktop-view-2" width="480" />
+
+
+## Mobile:
+
+<img src="https://i.imgur.com/4Q78X4u.png" alt="Mobile-view-1" width="300" /> <img src="https://i.imgur.com/i2Uo7Rz.png" alt="Mobile-view-2" width="300" />
+
 
 Clock and Weather application. 
 
